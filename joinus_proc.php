@@ -24,6 +24,7 @@
     echo "<script> alert(\"Join Complete\");";
     echo "location.href=\"login.html\"</script>";
   }
+  
   else{
     echo "<script> alert(\"Join Fail\");";
     echo "location.href=\"joinus.html\"</script>";
