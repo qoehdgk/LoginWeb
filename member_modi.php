@@ -29,6 +29,7 @@
           address :  <input type="text" name="address" value="<?php echo $result['address']; ?>"><br>
           telephone :  <input type="text" name="telephone" value="<?php echo $result['telephone']; ?>"><br>
           mobile :  <input type="text" name="mobile" value="<?php echo $result['mobile']; ?>"><br>
+          email :  <input type="text" name="email" value="<?php echo $result['email']; ?>"><br>
           <input type="submit" value="change">
           <input type="button" value="cancel">
         </form>

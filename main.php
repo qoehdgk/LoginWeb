@@ -1,5 +1,10 @@
 
 <?php
+
+  // if($_COOKIE['user'] =="persistent")
+  //   echo "not display pop up<br>";
+  // else
+  //   echo "display pop up<br>";
   session_start();
 
   if($_SESSION['LoginID'])

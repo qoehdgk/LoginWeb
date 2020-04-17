@@ -16,6 +16,10 @@
 
   if($result){
 
+    // $cookie_name="user";
+    // $cookie_value="persistent";
+
+    // setcookie($cookie_name, $cookie_value,time() + (86400*30));   //86400은 하루이다.
     session_start();
     $_SESSION['LoginID']=$id;
     echo "<script> alert(\"Login Complete\");";
