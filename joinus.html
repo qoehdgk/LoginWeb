@@ -45,14 +45,14 @@
           form.value.password_re.focus();
           return false;
         }
-          return true;
+          document.joinform.submit();
       }
     </script>
   </head>
   <body>
       <center>
           [회원가입]<br>
-          <form name="joinform" onsubmit="return check_onclick()" method="post" action="joinus_proc.php">
+          <form name="joinform"  method="post" action="joinus_proc.php">
           IP : <input type="text" name="id"><br>
           pw : <input type="password" name="password"><br>
           pw(re) : <input type="password" name="password_re"><br>
@@ -62,7 +62,7 @@
           telephone : <input type="text" name="telephone"><br>
           mobile : <input type="text" name="mobile"><br>
           email : <input type="text" name="email"><br>
-          <input type="submit" value="확인">
+          <input type="button" value="확인" onclick="check_onclick()">
           <input type="reset" value="취소">
           </form>
       </center>
