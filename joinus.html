@@ -36,9 +36,16 @@
 
         if (pwPtn.test(formValue.password.value) == false){
           alert("Password는 6~20자, 영문과 숫자, 특수문자를 포함해야 합니다.");
-          form.value.id.focus();
+          form.value.password.focus();
           return false;
         }
+
+        if (formValue.password.value != formValue.password_re.value){
+          alert("Password가 일치 되지 않습니다.");
+          form.value.password_re.focus();
+          return false;
+        }
+          return true;
       }
     </script>
   </head>
