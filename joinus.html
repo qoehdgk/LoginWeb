@@ -3,11 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script type="text/javascript">
+      function check_onclick(){
+
+        var formValue = document.joinform;
+        var idPtn = /^(?=.*?[a-z])(?=.*?[0-9]).{4,12}$/;
+        var pwPtn = /^(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^$*-]).{6,20}$/;
+
+        if (formValue.id.value == ""){
+          alert("ID가 입력되지 않았습니다.");
+          form.value.id.focus();
+          return false;
+        }
+
+        if (idPtn.test(formValue.id.value) == false){
+          alert("ID는 4~12자, 영문과 숫자로 입력해야합니다.");
+          form.value.id.focus();
+          return false;
+        }
+
+        if (formValue.password.value == ""){
+          alert("Password가 입력 되지 않았습니다.");
+          form.value.password.focus();
+          return false;
+        }
+
+        if (formValue.password_re.value == ""){
+          alert("Password가 다시 입력 되지 않았습니다.");
+          form.value.password_re.focus();
+          return false;
+        }
+
+        if (pwPtn.test(formValue.password.value) == false){
+          alert("Password는 6~20자, 영문과 숫자, 특수문자를 포함해야 합니다.");
+          form.value.id.focus();
+          return false;
+        }
+      }
+    </script>
   </head>
   <body>
       <center>
           [회원가입]<br>
-          <form name="joinform" method="post" action="joinus_proc.php">
+          <form name="joinform" onsubmit="return check_onclick()" method="post" action="joinus_proc.php">
           IP : <input type="text" name="id"><br>
           pw : <input type="password" name="password"><br>
           pw(re) : <input type="password" name="password_re"><br>

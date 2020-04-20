@@ -23,7 +23,7 @@
     session_start();
     $_SESSION['LoginID']=$id;
     echo "<script> alert(\"Login Complete\");";
-    echo "location.href=\"../main.php\"</script>";
+    echo "location.href=\"main.php\"</script>";
   }
   else{
     echo "<script> alert(\"Login Fail\");";

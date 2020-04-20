@@ -24,7 +24,7 @@
   $return = mysql_query($sql);
   if($return){
     echo "<script> alert(\"Info Chanege OK\");";
-    echo "location.href=\"login.html\"</script>";
+    echo "location.href=\"../login/login.html\"</script>";
   }
 
   else{
