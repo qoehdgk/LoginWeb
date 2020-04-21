@@ -24,7 +24,7 @@
     <?php
       if($_SESSION['LoginID']){
     ?>
-      <a href="member/member_modi.php">회원정보 수정</a><br>
+      <a href="member/member_auth.php">회원정보 수정</a><br>
       <a href="member/member_out.php">회원탈퇴</a><br>
       <a href="logout.php">로그아웃</a><br>
     <?php

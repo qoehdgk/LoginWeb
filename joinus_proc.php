@@ -10,6 +10,16 @@
   $email = $_POST['email'];
   $joinus_date = date("Y-m-d H:i:s");
 
+  if(!preg_match('/^(?=.*?[a-z])(?=.*?[0-9]).{4,12}$/',$id)){
+    echo "<script> alert(\"아이디 입력값 오류!!\");";
+    echo "location.href=\"joinus.html\"; </script>";
+  }
+
+  if(!preg_match('/^(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^$*-]).{6,20}$/',$password)){
+    echo "<script> alert(\"비밀번호 입력값 오류!!\");";
+    echo "location.href=\"joinus.html\"; </script>";
+  }
+
   $conn = mysql_connect("localhost","webadmin","qwer1234");
 
   if(!$conn){
