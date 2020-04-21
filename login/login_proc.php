@@ -21,6 +21,7 @@
 
     // setcookie($cookie_name, $cookie_value,time() + (86400*30));   //86400은 하루이다.
     session_start();
+    session_regenerate_id();
     $_SESSION['LoginID']=$id;
     echo "<script> alert(\"Login Complete\");";
     echo "location.href=\"../main.php\"</script>";
