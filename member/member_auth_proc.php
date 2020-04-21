@@ -14,7 +14,7 @@
   $sql = "select * from member where id='$_SESSION[LoginID]'and password='$password';";
   $return = mysql_query($sql);
   $result = mysql_fetch_array($return);
-
+  
   if($result){
     echo "<script> location.href=\"member_modi.php\"</script>";
   }

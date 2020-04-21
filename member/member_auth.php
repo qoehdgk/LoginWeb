@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <?php
+      session_start();
+      if($_SESSION['LoginID'] == "admin123" && $_SERVER['REMOTE_ADDR'] != "100.100.100.10"){
+        echo "<script> alert(\"Session Token Error!!\");";
+        echo "location.href=\"../main.php\"</script>";
+      }
+     ?>
   </head>
   <body>
     <center>
