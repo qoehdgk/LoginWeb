@@ -15,7 +15,7 @@
   $return = mysql_query($sql);
   $result = mysql_fetch_array($return);
 
-  if($return){
+  if($result){
     echo "<script> location.href=\"member_modi.php\"</script>";
   }
 
