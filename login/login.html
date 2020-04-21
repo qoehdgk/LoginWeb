@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <title>Login</title>
   </head>
+  <script>
+    function onCancle(){
+      location.href="../main.php";
+    }
+
+  </script>
   <body>
     <center>
       [로그인]<br>
@@ -11,7 +17,7 @@
         IP : <input type="text" name="id"><br>
         pw : <input type="password" name="password"><br>
         <input type="submit" value="Login">
-        <input type="reset" value="Cancel">
+        <input type="reset" value="Cancel" onClick=onCancle()>
       </form>
     </center>
 

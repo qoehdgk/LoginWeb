@@ -6,7 +6,7 @@
 
   session_destroy();
     echo "<script> alert(\"Logout Complete\");";
-    echo "location.href=\"index.html\"</script>";
+    echo "location.href=\"main.php\"</script>";
 
 
 ?>
