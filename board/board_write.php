@@ -28,7 +28,7 @@
       mysql_close($conn);
     ?>
     <center>
-      <form method="get" name="board_write_form" action="board_write_proc.php">
+      <form method="post" name="board_write_form" action="board_write_proc.php">
           <table style="width: 700px;">
             <tr>
               <td colspan="2">게 시 글 작 성</td>
