@@ -36,7 +36,7 @@
     <?php
       }
     ?>
-    <a href="board.php">게시판</a><br>
+    <a href="board/board_list.php">게시판</a><br>
     <a href="webhard.php">웹하드</a><br>
   </body>
 </html>
