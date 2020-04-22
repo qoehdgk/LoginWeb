@@ -35,7 +35,10 @@
             </tr>
             <tr>
               <td>작성자</td>
-              <td><input type="texst" name="id" value="<?php echo $result['id']; ?>"</td>
+              <td>
+                <?php echo $result['id']; ?>
+              </td>
+              <input type="hidden" name="id" value="<?php echo $result['id']; ?>">
             </tr>
             <tr>
               <td>글 비밀번호</td>

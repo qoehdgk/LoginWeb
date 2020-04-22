@@ -55,7 +55,7 @@
             <td><?php echo $result['contents']; ?></td>
           </tr>
           <tr>
-            <td><input type="button" value="목록" onclick='location.replace("board_list.php")'></td>
+            <td colspan ="2"><input type="button" value="목록" onclick='location.replace("board_list.php")'></td>
           </tr>
         </table>
     </center>
