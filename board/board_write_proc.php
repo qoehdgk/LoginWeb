@@ -6,6 +6,12 @@
   $contents = $_POST['contents'];
   $write_date = date("Y-m-d H:i:s");
 
+  // $contents = str_replace("<","&lt;",$contents);   //<를 $lt로 대체 (인코딩)
+  // $contents = str_replace(">","&gt;",$contents);
+  // $contents = htmlspecialchars($contents);    //HTML 메타문자 인코딩
+  // $contents = strip_tags($contents);              //태그형태 지우기
+
+
   $conn = mysql_connect("localhost","webadmin","qwer1234");
 
   if(!$conn){

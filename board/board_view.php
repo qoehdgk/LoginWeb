@@ -15,6 +15,9 @@
   <body>
     <?php
       $no = $_GET['no'];
+
+      // $no = htmlspecialchars($no);
+      // $no = strip_tags($no);
       $conn = mysql_connect("localhost","webadmin","qwer1234");
 
       if(!$conn){
