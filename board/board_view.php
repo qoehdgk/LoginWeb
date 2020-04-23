@@ -10,7 +10,19 @@
           text-align: center;
         }
     </style>
+    <script type="text/javascript">
+      function check_onclick(){
+        formValue = document.delete_form;
 
+        if(formValue.password.value==""){
+          alert("비밀번호가 입력되지 않았습니다.");
+          formValue.password.focus();
+          return false;
+
+        }
+        document.delete_form.submit();
+      }
+    </script>
   </head>
   <body>
     <?php
@@ -57,9 +69,17 @@
             <td>글 내용</td>
             <td><?php echo $result['contents']; ?></td>
           </tr>
-          <tr>
-            <td colspan ="2"><input type="button" value="목록" onclick='location.replace("board_list.php")'></td>
+            <form name="delete_form" action="board_delete.php" method="post">
+              <input type="hidden" name="no" value="<?php echo $no; ?>">
+              <input type="hidden" name="id" value="<?php echo $result['id']; ?>">
+            <tr>
+            <td colspan ="2">
+              password: <input type="password" name="password">
+              <input type="button" value="삭제" onclick="check_onclick()">
+              <input type="button" value="목록" onclick='location.replace("board_list.php")'>
+            </td>
           </tr>
+          </form>
         </table>
     </center>
   </body>

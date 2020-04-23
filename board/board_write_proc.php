@@ -20,7 +20,7 @@
   }
 
   mysql_select_db("webhacktest");
-  $sql = "insert into board values('','$id','$password','$email','$title','$contents','$write_date')";
+  $sql = "insert into board values('','$id','$password','$email','$title','$contents','$write_date');";
 
   $return = mysql_query($sql);
   if($return){
@@ -33,5 +33,4 @@
     echo "location.href=\"board_write.php\"</script>";
   }
   mysql_close($conn);
-?>
 ?>

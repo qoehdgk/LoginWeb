@@ -28,7 +28,7 @@
   }
 
   mysql_select_db("webhacktest");
-  $sql = "insert into member values('$id','$password','$name','$nickname','$address','$telephone','$mobile','$email','$joinus_date')";
+  $sql = "insert into member values('$id','$password','$name','$nickname','$address','$telephone','$mobile','$email','$joinus_date');";
 
   $return = mysql_query($sql);
   if($return){
